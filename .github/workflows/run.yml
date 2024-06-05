@@ -4,4 +4,7 @@ jobs:
  check-bats-version:
    runs-on: ubuntu-latest
    steps:
-     - run: echo "test gcd"
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Run Test
+      run: ./test_gcd.sh
